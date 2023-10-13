@@ -1,0 +1,26 @@
+.wrapper {
+    max-width: 1480px;
+    margin   : 0 auto;
+
+    .hero {
+        padding: 17.75rem 0;
+    }
+
+    .brand-list {
+        display      : flex;
+        gap          : 2rem;
+        flex-wrap    : wrap;
+        margin-bottom: 12rem;
+    }
+
+    .current {
+        margin-bottom: 12.5rem;
+    }
+
+    .footer {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : flex-end;
+        margin-bottom  : 12.5rem;
+    }
+}

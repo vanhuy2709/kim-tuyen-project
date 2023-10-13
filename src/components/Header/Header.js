@@ -1,12 +1,12 @@
-import logo from "../assets/images/youtube-dark-icon.png";
-import "../styles/header.scss";
+import logo from "../../assets/images/youtube-dark-icon.png";
+import "./Header.scss";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="logo-header" className="header__logo--img" />
-        <h4 className="header__logo--title">ANTHONY WIKTOR</h4>
+        <h4 className="header__logo--title">KimBling</h4>
       </div>
 
       <div className="header__route">

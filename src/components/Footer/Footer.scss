@@ -1,0 +1,104 @@
+.footer__left {
+
+    .get-in-touch {
+        font-family   : var(--second-font);
+        font-weight   : normal;
+        font-size     : 0.875rem;
+        line-height   : 1;
+        letter-spacing: 0.5em;
+        color         : white;
+        margin-bottom : 1.2rem;
+    }
+
+    .social__list {
+        list-style-type: none;
+        display        : flex;
+        gap            : 0 0.5rem;
+        margin-bottom  : 6rem;
+
+        .social__item {
+
+            .social--link {
+                text-decoration: none;
+                font-family    : var(--main-font);
+                font-size      : 2.5rem;
+                font-weight    : 800;
+                line-height    : 1;
+            }
+        }
+    }
+
+    .move-forward {
+        font-size  : 2.5rem;
+        font-weight: 800;
+        line-height: 1;
+        color      : white;
+        font-family: var(--main-font);
+    }
+}
+
+.footer__right {
+
+    .btn-top {
+        background    : none;
+        outline       : none;
+        border        : none;
+        font-family   : var(--second-font);
+        font-weight   : normal;
+        font-size     : 0.875rem;
+        line-height   : 1;
+        letter-spacing: 0.5em;
+        cursor        : pointer;
+        color         : white;
+    }
+}
+
+
+// Adding style span '.' & social-link
+.blue {
+    color: blue;
+}
+
+.pink {
+    color: pink;
+}
+
+.purple {
+    color: purple;
+}
+
+.red {
+    color: red;
+}
+
+.facebook {
+    color: white;
+
+    &:hover {
+        color: blue;
+    }
+}
+
+.instagram {
+    color: white;
+
+    &:hover {
+        color: pink;
+    }
+}
+
+.gmail {
+    color: white;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.tiktok {
+    color: white;
+
+    &:hover {
+        color: purple;
+    }
+}
