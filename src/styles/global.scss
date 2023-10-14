@@ -14,9 +14,15 @@
     src        : url(../assets/fonts/Tungsten-Medium.ttf);
 }
 
+@font-face {
+    font-family: SourceSerif;
+    src        : url(../assets/fonts/SourceSerif4-Semibold.ttf);
+}
+
 :root {
     --main-font  : Sequel;
     --second-font: TungstenMedium;
+    --third-font : SourceSerif;
 }
 
 body {
@@ -26,4 +32,9 @@ body {
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition             : background 0.5s ease;
+}
+
+.wrapper {
+    max-width: 1480px;
+    margin   : 0 auto;
 }

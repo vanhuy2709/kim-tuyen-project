@@ -1,0 +1,63 @@
+.resume {
+    display        : flex;
+    justify-content: space-between;
+    gap            : 0 9.25rem;
+    margin-bottom  : 12.5rem;
+
+    .resume__left {
+        flex          : 1.3;
+        display       : flex;
+        flex-direction: column;
+        gap           : 2.5rem 0;
+
+
+        p {
+            font-size  : 21px;
+            font-weight: normal;
+            line-height: 1.8;
+            font-family: var(--third-font);
+        }
+    }
+
+    .resume__right {
+        flex          : 1;
+        display       : flex;
+        flex-direction: column;
+        gap           : 3.25rem 0;
+
+        .education {
+            list-style-type: none;
+
+            .education--title {
+                font-family   : var(--second-font);
+                font-size     : 0.875rem;
+                line-height   : 1;
+                letter-spacing: 0.5em;
+                margin-bottom : 1.3rem;
+            }
+
+            .education--content {
+                font-family: var(--main-font);
+            }
+        }
+
+        .experience {
+            list-style-type: none;
+            display        : flex;
+            flex-direction : column;
+            gap            : 1.75rem 0;
+
+            .experience--title {
+                font-family   : var(--second-font);
+                font-size     : 0.875rem;
+                line-height   : 1;
+                letter-spacing: 0.5em;
+                margin-bottom : 1.3rem;
+            }
+
+            .experience--content {
+                font-family: var(--main-font);
+            }
+        }
+    }
+}

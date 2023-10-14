@@ -1,5 +1,6 @@
 import logo from "../../assets/images/youtube-dark-icon.png";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,9 +11,12 @@ function Header() {
       </div>
 
       <div className="header__route">
-        <a href="https://facebook.com" className="header__route--link">
+        <Link className="header__route--link" to="/" exact>
+          HOME
+        </Link>
+        <Link className="header__route--link" to="/about">
           ABOUT
-        </a>
+        </Link>
       </div>
     </header>
   );

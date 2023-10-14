@@ -1,3 +1,10 @@
+.brand-list {
+    display      : flex;
+    gap          : 2rem;
+    flex-wrap    : wrap;
+    margin-bottom: 12rem;
+}
+
 .brand-box {
     background-color: #1A1A1A;
     width           : 29.5rem;
