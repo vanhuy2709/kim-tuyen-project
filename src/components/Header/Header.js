@@ -1,6 +1,6 @@
 import logo from "../../assets/images/youtube-dark-icon.png";
 import "./Header.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,12 +11,12 @@ function Header() {
       </div>
 
       <div className="header__route">
-        <Link className="header__route--link" to="/" exact>
+        <NavLink className="header__route--link" to="/">
           HOME
-        </Link>
-        <Link className="header__route--link" to="/about">
+        </NavLink>
+        <NavLink className="header__route--link" to="/about">
           ABOUT
-        </Link>
+        </NavLink>
       </div>
     </header>
   );

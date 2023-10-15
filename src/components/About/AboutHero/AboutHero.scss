@@ -1,6 +1,20 @@
-.about__title {
-    font-size  : 4rem;
-    font-weight: 800;
-    line-height: 63px;
-    padding    : 19rem 0 23.875rem;
+.about__hero {
+    display       : flex;
+    // align-items: center;
+
+    .about__title {
+        font-size  : 4rem;
+        font-weight: 800;
+        line-height: 63px;
+        padding    : 19rem 0 23.875rem;
+    }
+
+    .main-img {
+        display   : block;
+        width     : 45rem;
+        height    : 45rem;
+        object-fit: cover;
+
+        border-radius: 18rem 18rem 0 0;
+    }
 }

@@ -16,6 +16,11 @@
             font-weight: normal;
             line-height: 1.8;
             font-family: var(--third-font);
+
+            span {
+                font-family: var(--main-font);
+                font-weight: 500;
+            }
         }
     }
 

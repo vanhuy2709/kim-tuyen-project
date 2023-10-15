@@ -6,63 +6,59 @@ const Resume = () => {
       <div className="resume">
         <div className="resume__left">
           <p>
-            Given that Anthony grew up in Chicago rooting for sports legends
-            like MICHAEL JORDAN and WALTER PAYTON that’s no surprise.
+            "Xây dựng thương hiệu cá nhân là hành trình không đích đến, bản thân
+            có giá trị sẽ tạo nên giá trị" - <span>KIM BLING</span>
           </p>
           <p>
-            Anthony brings that competitive spirit to his branding and design
-            work, leading to shelves full of awards, and being listed in Web
-            Designer Magazine's “HOT 100” list twice.
+            Bản thân <span>KIM BLING</span> luôn theo đuổi hành trình tạo ra giá
+            trị cho cộng đồng, mong muốn lan toả, truyền tải những điều ý nghĩa
+            tích cực.
           </p>
           <p>
-            Case in point: Anthony's recent work for tech startup Motiv won a
-            WEBBY AWARD and helped generate the company's first thousand sales
-            with almost zero advertising.
+            Quan điểm sống "KHÔNG GÌ LÀ KHÔNG THỂ" và xem "THÁI ĐỘ" là tiêu chí
+            tiên quyết khi giải quyết vấn đề.
           </p>
           <p>
-            In addition to helping clients like ESPN and Netflix rise to victory
-            against their competitors, Anthony shares his passion with future
-            design professionals, leading creative workshops at USC’S Annenberg
-            Digital Lounge, serving on the board of AIGA Los Angeles and as an
-            expert panelist for the annual GlobalTrend Marketing Awards.
+            Là người có tâm hồn nghệ sĩ, yêu những giai điệu và không ngại thử
+            thách.
           </p>
         </div>
         <div className="resume__right">
           <ul className="education">
             <li className="education--title">EDUCATION</li>
             <li className="education--content">
-              WOODBURY UNIVERSITY
+              VNU University of Social Sciences and Humanities
               <br />
-              BFA GRAPHIC DESIGN, 2006
+              LINGUISTIC SECTOR, 2022
             </li>
           </ul>
 
           <ul className="experience">
             <li className="experience--title">EXPERIENCE</li>
             <li className="experience--content">
-              PRINCIPAL, CREATIVE DIRECTOR
+              HOSTING How2Money, ZReview, ZWeather...
               <br />
-              AD VICTOREM, 2017-
+              ZING NEWS, 6/2021-
             </li>
             <li className="experience--content">
-              CREATIVE DIRECTOR
+              MC News 24h, Blockchain Event
               <br />
-              AZUBU.TV, 2015-2017
+              GFI BLOCKCHAIN, 2021-2022
             </li>
             <li className="experience--content">
-              INDEPENDENT CREATIVE DIRECTOR
+              Host Glowie Spotlight Streetstyle
               <br />
-              CONSENSUS INC., 2013-2015
+              GLOWIE APP, 2021-2022
             </li>
             <li className="experience--content">
-              CREATIVE DIRECTOR
+              KOL at Blue Agency VietNam
               <br />
-              STARMEN DESIGN GROUP, 2008-2014
+              2023
             </li>
             <li className="experience--content">
-              MARKETING ART DIRECTOR
+              FREELANCE MC, MODEL
               <br />
-              SOTHEBY’S REAL ESTATE, 2006-2008
+              NESTLE, PNJ, GUMAC, HEINEKEN...
             </li>
           </ul>
         </div>

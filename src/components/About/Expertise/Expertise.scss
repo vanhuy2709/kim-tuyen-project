@@ -35,11 +35,12 @@
             }
 
             .skill--detail {
-                font-size  : 1rem;
-                font-weight: 400;
-                font-family: var(--main-font);
-                line-height: 2.8;
-                color      : black;
+                font-size     : 1rem;
+                font-weight   : 400;
+                font-family   : var(--main-font);
+                line-height   : 2.8;
+                color         : black;
+                text-transform: uppercase;
             }
         }
     }

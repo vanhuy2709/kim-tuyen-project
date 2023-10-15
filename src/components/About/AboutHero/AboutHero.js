@@ -1,17 +1,19 @@
 import "./AboutHero.scss";
+import imgPortfolio from "../../../assets/images/IMG_3966.JPG";
 
 const AboutHero = () => {
   return (
     <div className="wrapper">
-      <h2 className="about__title">
-        COMPETITION
-        <br />
-        AND CREATIVITY
-        <br />
-        RUNS HARD IN
-        <br />
-        HIS VEINS.
-      </h2>
+      <div className="about__hero">
+        <h2 className="about__title">
+          HELLO
+          <br />
+          I'M KIM BLING.
+          <br />
+          Master of Ceremony.
+        </h2>
+        <img src={imgPortfolio} alt="main-img" className="main-img" />
+      </div>
     </div>
   );
 };
