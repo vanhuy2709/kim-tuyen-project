@@ -14,15 +14,17 @@
             cursor: pointer;
 
             &:hover+.header__logo--title {
-                display  : block;
+                opacity  : 1;
                 transform: translateX(0);
             }
         }
 
         .header__logo--title {
-            margin   : 0;
-            display  : none;
-            transform: translateX(30px);
+            margin     : 0;
+            opacity    : 0;
+            transform  : translateX(30px);
+            transition : all 0.3s ease;
+            font-family: var(--third-font);
         }
     }
 

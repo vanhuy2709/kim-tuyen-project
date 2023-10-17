@@ -3,7 +3,8 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import About from "../components/About/About";
 import Portfolio from "../components/Portfolio/Portfolio";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 function App() {
   // Lấy chiều cao của document
@@ -24,16 +25,23 @@ function App() {
     }
   });
 
+  const location = useLocation();
+
   return (
+    // <Router>
     <div className="App">
       <Header />
-
-      <Routes>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <TransitionGroup>
+        <CSSTransition key={location.key} classNames="slide" timeout={800}>
+          <Routes location={location}>
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
       <Footer />
     </div>
+    // {/* </Router> */}
   );
 }
 

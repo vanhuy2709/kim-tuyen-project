@@ -7,7 +7,7 @@ function Header() {
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="logo-header" className="header__logo--img" />
-        <h4 className="header__logo--title">KimBling</h4>
+        <h4 className="header__logo--title">Kim Tuyến</h4>
       </div>
 
       <div className="header__route">
