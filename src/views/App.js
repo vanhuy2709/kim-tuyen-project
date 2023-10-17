@@ -5,6 +5,7 @@ import About from "../components/About/About";
 import Portfolio from "../components/Portfolio/Portfolio";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   // Lấy chiều cao của document
