@@ -10,9 +10,13 @@ h2 {
     line-height   : 0.9;
 
     .line {
-        // transform: matrix(1, 0, 0, 1, 0, 0);
-        opacity  : 0;
-        animation: animationLine 2s forwards;
+        font-family   : Sequel;
+        font-size     : 4.375rem;
+        font-weight   : 800;
+        text-transform: uppercase;
+        line-height   : 0.9;
+        opacity       : 0;
+        animation     : animationLine 2s forwards;
 
         &:nth-of-type(1) {
             animation-delay: 0s;

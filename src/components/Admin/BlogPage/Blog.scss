@@ -1,0 +1,25 @@
+.blog {
+    display: flex;
+
+    .left {
+        width           : 4%;
+        position        : fixed;
+        height          : 100%;
+        background-color: #0A0A0A;
+    }
+
+    .main {
+        flex    : 1;
+        overflow: auto;
+        margin  : 0 4%;
+    }
+
+    .right {
+        width           : 4%;
+        position        : fixed;
+        right           : 0;
+        bottom          : 0;
+        height          : 100%;
+        background-color: #0A0A0A;
+    }
+}

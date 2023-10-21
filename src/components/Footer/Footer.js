@@ -6,7 +6,7 @@ const Footer = () => {
     scroller.scrollTo("App", {
       duration: 1000,
       delay: 100,
-      smooth: true,
+      // smooth: true,
     });
   };
 

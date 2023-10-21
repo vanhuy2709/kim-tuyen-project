@@ -4,12 +4,16 @@ import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 import { BrowserRouter as Router } from "react-router-dom";
+import Login from "./components/Admin/Login/Login";
+import Blog from "./components/Admin/BlogPage/Blog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      {/* <App /> */}
+      {/* <Login /> */}
+      <Blog />
     </Router>
   </React.StrictMode>
 );

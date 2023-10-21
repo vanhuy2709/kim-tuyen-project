@@ -19,10 +19,16 @@
     src        : url(../assets/fonts/SourceSerif4-Semibold.ttf);
 }
 
+@font-face {
+    font-family: Ridley;
+    src        : url(../assets/fonts/RidleyGroteskDemo-Regular.otf);
+}
+
 :root {
     --main-font  : Sequel;
     --second-font: TungstenMedium;
     --third-font : SourceSerif;
+    --param-font : Ridley;
 }
 
 body {

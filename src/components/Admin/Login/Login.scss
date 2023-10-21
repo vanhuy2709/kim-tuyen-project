@@ -1,0 +1,20 @@
+.form {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    height         : 100vh;
+
+    form {
+        background-color: white;
+        border-radius   : 8px;
+        padding         : 3rem;
+        box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .error {
+        color    : red;
+        font-size: 12px;
+    }
+}
