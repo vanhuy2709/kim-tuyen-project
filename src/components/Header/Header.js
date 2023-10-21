@@ -1,4 +1,4 @@
-import logo from "../../assets/images/youtube-dark-icon.png";
+import logo from "../../assets/images/GFI-logo.png";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 
