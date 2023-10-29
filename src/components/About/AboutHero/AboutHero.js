@@ -1,5 +1,4 @@
 import "./AboutHero.scss";
-import imgPortfolio from "../../../assets/images/IMG_3966.JPG";
 
 const AboutHero = () => {
   return (
@@ -12,7 +11,6 @@ const AboutHero = () => {
           <br />
           Master of Ceremony.
         </h2>
-        <img src={imgPortfolio} alt="main-img" className="main-img" />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import "./About.scss";
 import AboutHero from "./AboutHero/AboutHero";
 import Resume from "./Resume/Resume";
 import Expertise from "./Expertise/Expertise";
-import ClientBrand from "./ClientBrand/ClientBrand";
+import Client from "./About_Client/Client";
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
       <AboutHero />
       <Resume />
       <Expertise />
-      <ClientBrand />
+      <Client />
     </section>
   );
 };

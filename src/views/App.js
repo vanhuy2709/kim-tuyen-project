@@ -5,6 +5,7 @@ import About from "../components/About/About";
 import Portfolio from "../components/Portfolio/Portfolio";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import Blog from "../components/Admin/BlogPage/Blog";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     const AppContainer = document.querySelector(".App");
 
     // Thay đổi màu nền dựa theo phần trăm scroll
-    if (scrollPercent < 10) {
+    if (scrollPercent < 5) {
       document.body.style.background = "white";
       AppContainer.style.color = "black";
     } else {
@@ -29,20 +30,21 @@ function App() {
   const location = useLocation();
 
   return (
-    // <Router>
+    // <BrowserRouter>
     <div className="App">
       <Header />
       <TransitionGroup>
         <CSSTransition key={location.key} classNames="slide" timeout={800}>
           <Routes location={location}>
-            <Route path="/" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<About />} />
+            <Route path="/about" element={<Portfolio />} />
+            {/* <Route path="/blog" element={<Blog />} /> */}
           </Routes>
         </CSSTransition>
       </TransitionGroup>
       <Footer />
     </div>
-    // {/* </Router> */}
+    // {/* </BrowserRouter> */}
   );
 }
 

@@ -1,0 +1,69 @@
+import React from "react";
+import "./Client.scss";
+import gfiLogo from "../../../assets/images/GFI-logo.png";
+import beionLogo from "../../../assets/images/beion-logo.png";
+import bomLogo from "../../../assets/images/bom-logo.png";
+import californiaLogo from "../../../assets/images/california-logo.png";
+import congCoffeeLogo from "../../../assets/images/cong-coffee-logo.png";
+import emmieLogo from "../../../assets/images/emmie-logo.png";
+import glowieLogo from "../../../assets/images/glowie-logo.png";
+import gumacLogo from "../../../assets/images/gumac-logo.png";
+import heinekenLogo from "../../../assets/images/heineken-logo.png";
+import hoaianLogo from "../../../assets/images/hoai-an-logo.png";
+import jockeyLogo from "../../../assets/images/jockey-logo.png";
+import jp24Logo from "../../../assets/images/jp24-logo.png";
+import kitawaLogo from "../../../assets/images/kitawa-logo.png";
+import lavieLogo from "../../../assets/images/lavie-logo.png";
+import lazadaLogo from "../../../assets/images/lazada-logo.png";
+import nestleLogo from "../../../assets/images/nestle-logo.png";
+import orphicLogo from "../../../assets/images/orphic-logo.png";
+import pnjLogo from "../../../assets/images/pnj-logo.png";
+import prudentialLogo from "../../../assets/images/prudential-logo.png";
+import saigonDustyLogo from "../../../assets/images/saigon-dusty-logo.png";
+import saigonHotpotLogo from "../../../assets/images/saigon-hotpot-logo.png";
+import samsungLogo from "../../../assets/images/samsung-logo.png";
+import tupperwareLogo from "../../../assets/images/tupperware-logo.png";
+import vinfastLogo from "../../../assets/images/vinfast-logo.png";
+// import whoopLogo from "../../../assets/images/whoop-logo.png";
+import zemaLogo from "../../../assets/images/zema-logo.png";
+
+const Client = () => {
+  return (
+    <section className="client">
+      <div className="wrapper">
+        <div className="client-container">
+          <h2 className="client__title">CLIENTS</h2>
+          <div className="client__list">
+            <img src={gfiLogo} alt="gfi-logo" />
+            <img src={beionLogo} alt="gfi-logo" />
+            <img src={bomLogo} alt="gfi-logo" />
+            <img src={californiaLogo} alt="gfi-logo" />
+            <img src={congCoffeeLogo} alt="gfi-logo" />
+            <img src={emmieLogo} alt="gfi-logo" />
+            <img src={glowieLogo} alt="gfi-logo" />
+            <img src={gumacLogo} alt="gfi-logo" />
+            <img src={heinekenLogo} alt="gfi-logo" />
+            <img src={hoaianLogo} alt="gfi-logo" />
+            <img src={jockeyLogo} alt="gfi-logo" />
+            <img src={jp24Logo} alt="gfi-logo" />
+            <img src={kitawaLogo} alt="gfi-logo" />
+            <img src={lavieLogo} alt="gfi-logo" />
+            <img src={lazadaLogo} alt="gfi-logo" />
+            <img src={nestleLogo} alt="gfi-logo" />
+            <img src={orphicLogo} alt="gfi-logo" />
+            <img src={pnjLogo} alt="gfi-logo" />
+            <img src={prudentialLogo} alt="gfi-logo" />
+            <img src={saigonDustyLogo} alt="gfi-logo" />
+            <img src={saigonHotpotLogo} alt="gfi-logo" />
+            <img src={samsungLogo} alt="gfi-logo" />
+            <img src={tupperwareLogo} alt="gfi-logo" />
+            <img src={vinfastLogo} alt="gfi-logo" />
+            <img src={zemaLogo} alt="gfi-logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Client;

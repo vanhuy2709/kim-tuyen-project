@@ -17,6 +17,9 @@ function Header() {
         <NavLink className="header__route--link" to="/about">
           ABOUT
         </NavLink>
+        <NavLink className="header__route--link" to="/project">
+          PROJECT
+        </NavLink>
       </div>
     </header>
   );
