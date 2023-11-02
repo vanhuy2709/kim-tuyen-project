@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .client {}
 
 .client-container {
@@ -9,6 +11,14 @@
         -webkit-text-stroke: 1px white;
         color              : transparent;
         margin-bottom      : 1rem;
+
+        @include tablet {
+            font-size: 5rem;
+        }
+
+        @include mobile {
+            font-size: 2.5rem;
+        }
     }
 
     .client__list {
@@ -16,6 +26,14 @@
         display              : grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap             : 5rem 5rem;
+
+        @include tablet {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         img {
             display   : block;

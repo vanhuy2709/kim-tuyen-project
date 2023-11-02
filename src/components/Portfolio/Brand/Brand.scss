@@ -1,19 +1,39 @@
+@import '../../../styles/variables.scss';
+
 .brand-list {
     display      : flex;
     gap          : 2rem;
     flex-wrap    : wrap;
     margin-bottom: 12rem;
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
 }
 
 .brand-box {
     background-color: #1A1A1A;
-    width           : 29.5rem;
-    height          : 29.5rem;
+    width           : 28rem;
+    height          : 28rem;
     display         : flex;
     flex-direction  : column;
     align-items     : center;
     justify-content : center;
     cursor          : pointer;
+
+    @include tablet {
+        width : 20rem;
+        height: 20rem;
+    }
+
+    @include mobile {
+        width : 15rem;
+        height: 15rem;
+    }
 
     .brand-logo {
         width  : 50%;

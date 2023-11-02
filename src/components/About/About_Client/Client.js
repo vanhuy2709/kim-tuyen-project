@@ -26,39 +26,47 @@ import tupperwareLogo from "../../../assets/images/tupperware-logo.png";
 import vinfastLogo from "../../../assets/images/vinfast-logo.png";
 // import whoopLogo from "../../../assets/images/whoop-logo.png";
 import zemaLogo from "../../../assets/images/zema-logo.png";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Client = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <section className="client">
       <div className="wrapper">
         <div className="client-container">
           <h2 className="client__title">CLIENTS</h2>
           <div className="client__list">
-            <img src={gfiLogo} alt="gfi-logo" />
-            <img src={beionLogo} alt="gfi-logo" />
-            <img src={bomLogo} alt="gfi-logo" />
-            <img src={californiaLogo} alt="gfi-logo" />
-            <img src={congCoffeeLogo} alt="gfi-logo" />
-            <img src={emmieLogo} alt="gfi-logo" />
-            <img src={glowieLogo} alt="gfi-logo" />
-            <img src={gumacLogo} alt="gfi-logo" />
-            <img src={heinekenLogo} alt="gfi-logo" />
-            <img src={hoaianLogo} alt="gfi-logo" />
-            <img src={jockeyLogo} alt="gfi-logo" />
-            <img src={jp24Logo} alt="gfi-logo" />
-            <img src={kitawaLogo} alt="gfi-logo" />
-            <img src={lavieLogo} alt="gfi-logo" />
-            <img src={lazadaLogo} alt="gfi-logo" />
-            <img src={nestleLogo} alt="gfi-logo" />
-            <img src={orphicLogo} alt="gfi-logo" />
-            <img src={pnjLogo} alt="gfi-logo" />
-            <img src={prudentialLogo} alt="gfi-logo" />
-            <img src={saigonDustyLogo} alt="gfi-logo" />
-            <img src={saigonHotpotLogo} alt="gfi-logo" />
-            <img src={samsungLogo} alt="gfi-logo" />
-            <img src={tupperwareLogo} alt="gfi-logo" />
-            <img src={vinfastLogo} alt="gfi-logo" />
-            <img src={zemaLogo} alt="gfi-logo" />
+            <img src={gfiLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={beionLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={bomLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={californiaLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={congCoffeeLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={emmieLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={glowieLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={gumacLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={heinekenLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={hoaianLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={jockeyLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={jp24Logo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={kitawaLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={lavieLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={lazadaLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={nestleLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={orphicLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={pnjLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={prudentialLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={saigonDustyLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={saigonHotpotLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={samsungLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={tupperwareLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={vinfastLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={zemaLogo} alt="gfi-logo" data-aos="fade-up" />
           </div>
         </div>
       </div>

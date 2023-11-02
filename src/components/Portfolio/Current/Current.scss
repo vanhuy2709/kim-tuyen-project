@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .current {
     margin-bottom: 12.5rem;
 }
@@ -9,6 +11,14 @@
     font-weight            : 800;
     line-height            : 0.9;
     font-size              : 6.5rem;
+
+    @include tablet {
+        font-size: 4rem;
+    }
+
+    @include mobile {
+        font-size: 2rem;
+    }
 }
 
 .current-video {
@@ -31,5 +41,13 @@
         color      : white;
         top        : 8rem;
         left       : 4rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+        }
     }
 }

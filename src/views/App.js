@@ -7,6 +7,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 // import Blog from "../components/Admin/BlogPage/Blog";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Project from "../components/Project/Project";
 
 function App() {
   // Lấy chiều cao của document
@@ -38,7 +39,7 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<Portfolio />} />
-            {/* <Route path="/blog" element={<Blog />} /> */}
+            <Route path="/project" element={<Project />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

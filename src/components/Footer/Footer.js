@@ -23,7 +23,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/kimtuyenyooo"
               >
-                FB<span className="blue">.</span>
+                <i className="fa-brands fa-facebook"></i>
               </a>
             </li>
 
@@ -34,7 +34,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/kim.blingg"
               >
-                IG<span className="pink">.</span>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </li>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="mailto:kimtuyennguyenthi.vn@gmail.com"
               >
-                GM<span className="red">.</span>
+                <i className="fa-solid fa-envelope"></i>
               </a>
             </li>
 
@@ -56,7 +56,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="https://www.tiktok.com/@kimtuyenkimblingg"
               >
-                TT<span className="purple">.</span>
+                <i className="fa-brands fa-tiktok"></i>
               </a>
             </li>
           </ul>

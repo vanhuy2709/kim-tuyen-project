@@ -1,8 +1,15 @@
+@import '../../styles/variables.scss';
+
 .footer {
     display        : flex;
     justify-content: space-between;
     align-items    : flex-end;
     margin         : 12.5rem 0;
+
+    @include mobile {
+        gap           : 5rem 0;
+        flex-direction: column;
+    }
 
     .footer__left {
 
@@ -19,7 +26,7 @@
         .social__list {
             list-style-type: none;
             display        : flex;
-            gap            : 0 0.5rem;
+            gap            : 0 2rem;
             margin-bottom  : 6rem;
             padding        : 0;
 
@@ -31,6 +38,10 @@
                     font-size      : 2.5rem;
                     font-weight    : 800;
                     line-height    : 1;
+
+                    @include mobile {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -41,6 +52,10 @@
             line-height: 1;
             color      : white;
             font-family: var(--main-font);
+
+            @include mobile {
+                font-size: 1.8rem;
+            }
         }
     }
 
@@ -64,22 +79,6 @@
 
 
 // Adding style span '.' & social-link
-.blue {
-    color: blue;
-}
-
-.pink {
-    color: pink;
-}
-
-.purple {
-    color: purple;
-}
-
-.red {
-    color: red;
-}
-
 .facebook {
     color: white;
 

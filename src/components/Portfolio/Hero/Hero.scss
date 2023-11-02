@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .hero {
     padding: 22rem 0;
 }
@@ -17,6 +19,14 @@ h2 {
         line-height   : 0.9;
         opacity       : 0;
         animation     : animationLine 2s forwards;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+        }
 
         &:nth-of-type(1) {
             animation-delay: 0s;

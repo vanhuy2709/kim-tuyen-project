@@ -1,12 +1,24 @@
 import "./Expertise.scss";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Expertise = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="expertise">
       <div className="wrapper">
         <h2 className="expertise__title">EXPERTISE</h2>
         <div className="expertise__content">
-          <div className="expertise__skill">
+          <div
+            className="expertise__skill"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
             <h4 className="skill--title">MASTER of CEREMONIES</h4>
             <p className="skill--desc">
               Master of Ceremonies is the host or hostess who is in charge of
@@ -21,7 +33,11 @@ const Expertise = () => {
             <h6 className="skill--detail">Outgoing personality</h6>
             <h6 className="skill--detail">Building excitement</h6>
           </div>
-          <div className="expertise__skill">
+          <div
+            className="expertise__skill"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <h4 className="skill--title">VOICE TALENT</h4>
             <p className="skill--desc">
               A Voice Talent is a person who uses their voice professionally to
@@ -37,7 +53,11 @@ const Expertise = () => {
             <h6 className="skill--detail">Vocal versatility</h6>
             <h6 className="skill--detail">Evoke emotions</h6>
           </div>
-          <div className="expertise__skill">
+          <div
+            className="expertise__skill"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
             <h4 className="skill--title">STYLING</h4>
             <p className="skill--desc">
               A Stylist is a creative professional who helps individuals and
