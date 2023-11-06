@@ -11,38 +11,47 @@ import kitawaLogo from "./kitawa-logo.png";
 const data = [
   {
     id: 1,
-    imgUrl: congcapheLogo,
-  },
-  {
-    id: 2,
+    name: "samsung",
     imgUrl: samsungLogo,
   },
   {
-    id: 3,
-    imgUrl: gfiLogo,
-  },
-  {
-    id: 4,
+    id: 2,
+    name: "heineken",
     imgUrl: heinekenLogo,
   },
   {
+    id: 3,
+    name: "prudential",
+    imgUrl: prudentialLogo,
+  },
+  {
+    id: 4,
+    name: "lazada",
+    imgUrl: lazadaLogo,
+  },
+  {
     id: 5,
+    name: "california",
     imgUrl: californiaLogo,
   },
   {
     id: 6,
-    imgUrl: lazadaLogo,
+    name: "congcaphe",
+    imgUrl: congcapheLogo,
   },
   {
     id: 7,
-    imgUrl: prudentialLogo,
+    name: "gfi",
+    imgUrl: gfiLogo,
   },
   {
     id: 8,
+    name: "zema",
     imgUrl: zemaLogo,
   },
   {
     id: 9,
+    name: "kitawa",
     imgUrl: kitawaLogo,
   },
 ];

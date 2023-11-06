@@ -26,11 +26,10 @@ const Project = () => {
                 Master of Ceremony
               </h2>
               <p className="project__item-content--desc">
-                The master of ceremonies (MC) is the host who guides the event
-                program, introduces speakers and performers, and engages the
-                audience with charm and wit. The role requires excellent public
-                speaking skills, organization, and professionalism to lead a
-                polished event.
+                Who guides the event program, introduces speakers and
+                performers, and engages the audience with charm and wit. The
+                role requires excellent public speaking skills, organization,
+                and professionalism to lead a polished event.
               </p>
               <button className="project__item-content--btn">
                 <i className="fa-solid fa-arrow-right"></i>
@@ -45,7 +44,6 @@ const Project = () => {
                 alt="project-thumb"
                 className="project__item-thumb--image"
               />
-              {/* <img src={greyImage} alt="grey-img" className="grey-img" /> */}
             </div>
           </div>
           <div
@@ -57,11 +55,9 @@ const Project = () => {
               <h2 className="project__item-content--title">Styling</h2>
               <p className="project__item-content--desc">
                 Styling involves intentional choices in clothing, accessories,
-                hair, and makeup to craft a particular aesthetic. It is a form
-                of self-expression and allows people to convey personal taste
-                and sensibility through their appearance. Styling demonstrates
-                skill in combining visual elements like color, texture, and
-                silhouette to create a desired look and image.
+                hair, and makeup to craft a particular aesthetic. Styling
+                demonstrates skill in combining visual elements like color,
+                texture, and silhouette to create a desired look and image.
               </p>
               <button className="project__item-content--btn">
                 <i className="fa-solid fa-arrow-right"></i>
@@ -86,14 +82,10 @@ const Project = () => {
             <div className="project__item-content">
               <h2 className="project__item-content--title">Beauty</h2>
               <p className="project__item-content--desc">
-                Beauty is the subjective experience of pleasure or satisfaction
-                derived from the visual appeal, aesthetic qualities, and
-                physical attributes of a person, place, object or idea. Though
-                perceptions of beauty vary across cultures and individuals,
-                there are certain visual characteristics and physical traits
-                often considered universally beautiful, including symmetry,
-                youthfulness, and phenotypic health. Beauty lifts the human
-                spirit and transcends the mundane through the sublime.
+                The subjective experience of pleasure or satisfaction derived
+                from the visual appeal, aesthetic qualities and physical
+                attributes of a person, place, object or idea. Beauty lifts the
+                human spirit and transcends the mundane throuagh the sublime.
               </p>
               <button className="project__item-content--btn">
                 <i className="fa-solid fa-arrow-right"></i>

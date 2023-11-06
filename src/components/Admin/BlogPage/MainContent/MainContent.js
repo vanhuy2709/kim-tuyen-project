@@ -2,10 +2,14 @@ import "./MainContent.scss";
 import ReactPlayer from "react-player";
 
 function MainContent(props) {
-  console.log(props);
+  const backgroundImage = {
+    backgroundImage:
+      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1516128043650-037fbdbd0b6e?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+  };
+
   return (
     <div className="main-content">
-      <div className="main-content__background">
+      <div className="main-content__background" style={backgroundImage}>
         <img src={props.mainImage} alt="main" className="main-content__image" />
       </div>
 
