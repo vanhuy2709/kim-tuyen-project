@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.current {
+    margin-bottom: 12.5rem;
+}
+
+.current-title {
+    color                  : transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke    : 1px white;
+    font-weight            : 800;
+    line-height            : 0.9;
+    font-size              : 6.5rem;
+
+    @include tablet {
+        font-size: 4rem;
+    }
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+.current-video {
+    position: relative;
+
+    video {
+        margin    : 0 auto;
+        width     : 95%;
+        height    : 29rem;
+        object-fit: cover;
+        display   : block;
+    }
+
+    .current-desc {
+        font-size  : 4.375rem;
+        font-weight: 800;
+        line-height: 0.9;
+        font-family: var(--main-font);
+        position   : absolute;
+        color      : white;
+        top        : 8rem;
+        left       : 4rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+}
