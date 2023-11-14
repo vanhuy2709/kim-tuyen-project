@@ -62,7 +62,7 @@ export class ContactService {
         { name: { $regex: value, $options: 'i' } },
         { phoneNumber: { $regex: value, $options: 'i' } },
         { email: { $regex: value, $options: 'i' } },
-        { _id: { $regex: value, $options: 'i' } },
+        { description: { $regex: value, $options: 'i' } },
       ]
     })
   }

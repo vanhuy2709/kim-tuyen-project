@@ -53,10 +53,12 @@ export class BlogService {
     }
   }
   async findValue(value: string) {
+
     return await this.blogModel.find({
       $or: [
         { title: { $regex: value, $options: 'i' } },
         { description: { $regex: value, $options: 'i' } },
+        { idRole: { $regex: value, $options: 'i' } },
       ]
     })
   }

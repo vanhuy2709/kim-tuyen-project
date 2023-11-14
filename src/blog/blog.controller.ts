@@ -3,7 +3,7 @@ import { BlogService } from './blog.service';
 import { CreateBlogDto } from './dto/create-blog.dto';
 import { UpdateBlogDto } from './dto/update-blog.dto';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
-import { ResponseMessage } from 'src/decorator/customize';
+import { Public, ResponseMessage } from 'src/decorator/customize';
 
 @Controller('blog')
 export class BlogController {
@@ -19,6 +19,7 @@ export class BlogController {
   @Get()
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get all Blog")
+  @Public()
   findAll(@Query('current') currentPage: string,
     @Query('pageSize') limit: string,
     @Query() qs: string) {
@@ -27,7 +28,8 @@ export class BlogController {
 
   @Get("find")
   @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Get a Contact")
+  @ResponseMessage("Get a Blog")
+  @Public()
   findValue(@Query('value') value: string) {
     return this.blogService.findValue(value);
   }
@@ -35,6 +37,7 @@ export class BlogController {
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Role")
+  @Public()
   findOne(@Param('id') id: string) {
     return this.blogService.findOne(id);
   }
