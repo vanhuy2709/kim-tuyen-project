@@ -3,13 +3,24 @@ import "./ProjectPage.scss";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "aos/dist/aos.css";
+import { fetchApiPostAction } from "../../actions/post.action";
 
 const ProjectPage = () => {
+  const dispatch = useDispatch();
+
+  const { listPost } = useSelector((reduxData) => {
+    return reduxData.post;
+  });
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    dispatch(fetchApiPostAction());
   }, []);
+
+  console.log(listPost);
 
   return (
     <section className="project">

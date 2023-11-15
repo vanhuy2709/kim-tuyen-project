@@ -7,12 +7,21 @@ import { BrowserRouter } from "react-router-dom";
 // import Login from "./components/Admin/Login/Login";
 // import Blog from "./components/Admin/BlogPage/Blog";
 
+import rootReducer from "./reducers";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
