@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import HomePage from "./HomePage/HomePage";
 import AboutPage from "./AboutPage/AboutPage";
 import ProjectPage from "./ProjectPage/ProjectPage";
-// import Layout from "../components/Layout/Layout";
 
 function App() {
   useEffect(() => {
