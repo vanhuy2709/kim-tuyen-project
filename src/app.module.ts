@@ -5,11 +5,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
-import { softDeletePlugin } from 'soft-delete-plugin-mongoose';
 import { BlogModule } from './blog/blog.module';
 import { ContactModule } from './contact/contact.module';
 import { BrandModule } from './brand/brand.module';
-
 
 @Module({
   imports: [
@@ -22,7 +20,7 @@ import { BrandModule } from './brand/brand.module';
     }),
 
     ConfigModule.forRoot({
-      isGlobal: true
+      isGlobal: true,
     }),
 
     UsersModule,
@@ -34,4 +32,4 @@ import { BrandModule } from './brand/brand.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
