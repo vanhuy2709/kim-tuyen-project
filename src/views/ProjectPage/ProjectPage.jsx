@@ -5,7 +5,20 @@ import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 
+// import { fetchApiRoleAction } from '../../store/actions/role.action';
+import { fetchApiAuthAction } from '../../store/actions/auth.action'
+import { useSelector, useDispatch } from 'react-redux'
+
 const ProjectPage = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchApiAuthAction())
+  }, [dispatch])
+
+  const { token } = useSelector(reduxData => reduxData.blogReducer)
+  console.log(token)
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();

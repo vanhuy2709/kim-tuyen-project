@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import HomePage from "./HomePage/HomePage";
 import AboutPage from "./AboutPage/AboutPage";
 import ProjectPage from "./ProjectPage/ProjectPage";
+import ListBlog from '../components/ListBlog/ListBlog'
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/project" element={<ProjectPage />} />
             <Route path="/about/heineken" element={<Blog />} />
+            <Route path="/project/:idRole" element={<ListBlog />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

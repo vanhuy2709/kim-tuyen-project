@@ -8,12 +8,21 @@ import { BrowserRouter } from "react-router-dom";
 // import Blog from "./components/Admin/BlogPage/Blog";
 import ScrollToTop from "./utils/ScrollToTop";
 
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from 'redux-thunk';
+import rootReducer from "./store/reducers";
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );
