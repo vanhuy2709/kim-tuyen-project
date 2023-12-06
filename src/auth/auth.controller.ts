@@ -43,7 +43,7 @@ export class AuthController {
     @Get('account')
     @ResponseMessage("Get user information")
     @UseInterceptors(TransformInterceptor)
-    async getAccountfromHeader(@UserDecorate() user: IUser) {
+    async getAccountFromHeader(@UserDecorate() user: IUser) {
         return { user };
     }
 

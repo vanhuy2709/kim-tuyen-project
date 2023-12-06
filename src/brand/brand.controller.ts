@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Que
 import { BrandService } from './brand.service';
 import { CreateBrandDto } from './dto/create-brand.dto';
 import { UpdateBrandDto } from './dto/update-brand.dto';
-import { ResponseMessage } from 'src/decorator/customize';
+import { Public, ResponseMessage } from 'src/decorator/customize';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
 
 @Controller('brand')
@@ -19,6 +19,7 @@ export class BrandController {
   @Get()
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get all Brand")
+  @Public()
   findAll(@Query('current') currentPage: string,
     @Query('pageSize') limit: string,
     @Query() qs: string) {
@@ -28,6 +29,7 @@ export class BrandController {
   @Get("find")
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Brand")
+  @Public()
   findValue(@Query('value') value: string) {
     return this.brandService.findValue(value);
   }
@@ -35,6 +37,7 @@ export class BrandController {
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Brand")
+  @Public()
   findOne(@Param('id') id: string) {
     return this.brandService.findOne(id);
   }

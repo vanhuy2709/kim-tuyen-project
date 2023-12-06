@@ -36,7 +36,7 @@ export class BlogController {
 
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Get a Role")
+  @ResponseMessage("Get a Blog")
   @Public()
   findOne(@Param('id') id: string) {
     return this.blogService.findOne(id);
@@ -44,14 +44,14 @@ export class BlogController {
 
   @Patch(':id')
   @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Update a Role")
+  @ResponseMessage("Update a Blog")
   update(@Param('id') id: string, @Body() updateBlogDto: UpdateBlogDto) {
     return this.blogService.update(id, updateBlogDto);
   }
 
   @Delete(':id')
   @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Delete a Role")
+  @ResponseMessage("Delete a Blog")
   remove(@Param('id') id: string) {
     return this.blogService.remove(id);
   }
