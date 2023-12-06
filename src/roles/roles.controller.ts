@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Que
 import { RolesService } from './roles.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
-import { ResponseMessage } from 'src/decorator/customize';
+import { Public, ResponseMessage } from 'src/decorator/customize';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
 
 @Controller('roles')
@@ -19,6 +19,7 @@ export class RolesController {
   @Get()
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get all Role")
+  @Public()
   findAll(@Query('current') currentPage: string,
     @Query('pageSize') limit: string,
     @Query() qs: string) {
@@ -28,6 +29,7 @@ export class RolesController {
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Role")
+  @Public()
   findOne(@Param('id') id: string) {
     return this.rolesService.findOne(id);
   }
