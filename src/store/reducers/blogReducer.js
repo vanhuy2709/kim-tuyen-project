@@ -1,5 +1,5 @@
 import { FETCH_ROLE_ERROR, FETCH_ROLE_PENDING, FETCH_ROLE_SUCCESS } from '../constants/role.constant'
-import { BLOG_FETCH_ERROR, BLOG_FETCH_PENDING, BLOG_FETCH_SUCCESS } from '../constants/blog.constant'
+import { BLOG_FETCH_ERROR, BLOG_FETCH_PENDING, BLOG_FETCH_SUCCESS, BLOG_ID_FETCH_ERROR, BLOG_ID_FETCH_PENDING, BLOG_ID_FETCH_SUCCESS } from '../constants/blog.constant'
 import { FETCH_AUTH_ERROR, FETCH_AUTH_SUCCESS } from '../constants/auth.constant'
 
 const initState = {
@@ -7,10 +7,14 @@ const initState = {
 
     // List Role (MC, Beauty, Xe,...)
     listRole: undefined,
-    rolePending: false,
+    listRolePending: false,
 
     // List Blog (MC, Beauty, Xe,...)
     listBlog: undefined,
+    listBlogPending: false,
+
+    // Blog Detail
+    blog: undefined,
     blogPending: false
 }
 
@@ -25,25 +29,38 @@ const blogReducer = (state = initState, action) => {
 
         // Fetch Role
         case FETCH_ROLE_PENDING:
-            state.rolePending = true
+            state.listRolePending = true
             break
         case FETCH_ROLE_SUCCESS:
-            state.listRole = action.payload
-            state.rolePending = false
+            state.listRole = action.payload.data.result
+            state.listRolePending = false
             break
         case FETCH_ROLE_ERROR:
             break
 
-        // Fetch Blog
+        // Fetch Blog by Role
         case BLOG_FETCH_PENDING:
-            state.blogPending = true
+            state.listBlogPending = true
             break
         case BLOG_FETCH_SUCCESS:
-            state.blogPending = false
+            state.listBlogPending = false
             state.listBlog = action.payload
             break
         case BLOG_FETCH_ERROR:
             break
+
+        // Fetch Blog by ID
+        case BLOG_ID_FETCH_PENDING:
+            state.blogPending = true
+            break
+        case BLOG_ID_FETCH_SUCCESS:
+            state.blogPending = false
+            state.blog = action.payload.data
+            break;
+        case BLOG_ID_FETCH_ERROR:
+            break
+
+
         default:
             break;
     }

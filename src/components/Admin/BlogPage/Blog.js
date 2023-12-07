@@ -4,8 +4,22 @@ import MainContent from "./MainContent/MainContent";
 import RightSide from "./RightSide/RightSide";
 import mainImage from "../../../assets/images/heineken-logo.png";
 import urlVideo from "../../../assets/videos/Heineken Vũng Tàu - nhà máy bia của tương lai - Kinh doanh - ZINGNEWS.VN.mp4";
+import { useParams } from "react-router-dom";
+import { fetchApiBlogByIdAction } from "../../../store/actions/blog.action";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
-const Blog = (props) => {
+const Blog = () => {
+  const dispatch = useDispatch();
+  const { idBlog } = useParams();
+
+  useEffect(() => {
+    dispatch(fetchApiBlogByIdAction(idBlog))
+  }, [dispatch, idBlog])
+
+  const { blog } = useSelector(reduxData => reduxData.blogReducer)
+  console.log(blog);
+
   return (
     <section className="blog">
       <div className="left">
@@ -14,8 +28,8 @@ const Blog = (props) => {
       <div className="main">
         <MainContent
           mainImage={mainImage}
-          title="Going Metro with Latif Blessing"
-          param="We were thrilled to collaborate with Los Angeles's newest sports team, LAFC and the talented crew at Friendly Filmworks to tell fans how to get to the new Banc of California Stadium in Exposition Park via the Los Angeles Metro Expo Line."
+          title={blog ? blog.title : ''}
+          param={blog ? blog.description : ''}
           urlVideo={urlVideo}
         />
       </div>

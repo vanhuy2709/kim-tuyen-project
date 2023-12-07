@@ -3,26 +3,61 @@
 
     .list-blog-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 2rem;
 
         .blog-card {
-            background-color: red;
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 6px 35px #0000001a;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
 
-            .blog-card__image {
-                display: block;
-                width: 100%;
-                height: 100%;
+            &:hover {
+                background: black;
+                color: white;
             }
-            .blog-card__title {
-                font-size: 27px;
-                font-weight: 700;
-                text-transform: capitalize;
-            }
-            .blog-card__brand {
 
+            .image {
+                .blog-card__image {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .content {
+                padding: 1.5rem;
+
+                .content__title {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    i {
+                        background: -webkit-linear-gradient(#FFA524, #FFEA2F);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 34px;
+                    }
+
+                    .blog-card__title {
+                        font-size: 27px;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        position: relative;
+                        text-decoration: none;
+                        display: block;
+                        font-family: var(--third-font);
+                        margin: 0;
+                    }
+                }
+                .blog-card__brand {
+                    font-family: var(--param-font);
+                    margin: 0;
+                }
             }
         }
     }

@@ -1,10 +1,8 @@
 import "./ProjectPage.scss";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-import { fetchApiAuthAction } from '../../store/actions/auth.action'
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { fetchApiRoleAction } from '../../store/actions/role.action'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -16,15 +14,11 @@ const ProjectPage = () => {
 
   const dispatch = useDispatch();
 
-  const { token, listRole } = useSelector(reduxData => reduxData.blogReducer)
+  const { listRole } = useSelector(reduxData => reduxData.blogReducer)
 
   useEffect(() => {
-    dispatch(fetchApiAuthAction())
+    dispatch(fetchApiRoleAction());
   }, [dispatch])
-
-  useEffect(() => {
-    dispatch(fetchApiRoleAction(token));
-  }, [dispatch, token])
 
   return (
     <section className="project">
@@ -56,7 +50,7 @@ const ProjectPage = () => {
               </div>
               <div className="project__item-thumb">
                 <img
-                  src="https://media.istockphoto.com/id/1437738538/vi/anh/m%E1%BB%99t-ng%C6%B0%E1%BB%9Di-d%E1%BA%ABn-ch%C6%B0%C6%A1ng-tr%C3%ACnh-game-show-nam-%C4%91ang-tr%C3%ACnh-b%C3%A0y-cu%E1%BB%99c-thi.jpg?s=2048x2048&w=is&k=20&c=qf32V4mZYDo663kR0ON2jeCEvCUzX-409NS37sSBMkQ="
+                  src="https://images.unsplash.com/photo-1602564524425-69f1cfa037eb?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="project-thumb"
                   className="project__item-thumb--image"
                 />

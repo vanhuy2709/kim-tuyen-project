@@ -11,9 +11,6 @@ export const fetchApiRoleAction = (inputToken) => {
                 method: 'GET',
                 maxBodyLength: Infinity,
                 url: vAPI_ROLE_URL,
-                headers: {
-                    'Authorization': `Bearer ${inputToken}`
-                }
             }
 
             await dispatch({
@@ -24,7 +21,7 @@ export const fetchApiRoleAction = (inputToken) => {
 
             return dispatch({
                 type: FETCH_ROLE_SUCCESS,
-                payload: responseData.data.data.result
+                payload: responseData.data
             })
 
         } catch (error) {

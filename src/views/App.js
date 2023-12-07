@@ -13,6 +13,7 @@ import ProjectPage from "./ProjectPage/ProjectPage";
 import ListBlog from '../components/ListBlog/ListBlog'
 
 function App() {
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const AppContainer = document.querySelector(".App");
@@ -41,6 +42,7 @@ function App() {
             <Route path="/about/heineken" element={<Blog />} />
             <Route path="/project" element={<ProjectPage />} />
             <Route path="/project/:idRole" element={<ListBlog />} />
+            <Route path="/project/:idRole/:idBlog" element={<Blog />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
