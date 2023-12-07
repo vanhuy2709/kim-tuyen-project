@@ -1,0 +1,29 @@
+.list-blog {
+    padding-top: 12rem;
+
+    .list-blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+
+        .blog-card {
+            background-color: red;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .blog-card__image {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .blog-card__title {
+                font-size: 27px;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            .blog-card__brand {
+
+            }
+        }
+    }
+}

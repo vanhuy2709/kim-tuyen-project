@@ -1,25 +1,30 @@
 import { FETCH_ROLE_ERROR, FETCH_ROLE_PENDING, FETCH_ROLE_SUCCESS } from '../constants/role.constant'
+import axios from 'axios'
 
-export const fetchApiRoleAction = () => {
+export const fetchApiRoleAction = (inputToken) => {
     const vAPI_ROLE_URL = 'http://localhost:8000/api/v1/roles/'
 
     return async (dispatch) => {
 
         try {
-            let requestOptions = {
+            let config = {
                 method: 'GET',
+                maxBodyLength: Infinity,
+                url: vAPI_ROLE_URL,
+                headers: {
+                    'Authorization': `Bearer ${inputToken}`
+                }
             }
 
             await dispatch({
                 type: FETCH_ROLE_PENDING
             })
 
-            let response = await fetch(vAPI_ROLE_URL, requestOptions)
-            let data = await response.json();
+            let responseData = await axios.request(config);
 
             return dispatch({
                 type: FETCH_ROLE_SUCCESS,
-                payload: data
+                payload: responseData.data.data.result
             })
 
         } catch (error) {

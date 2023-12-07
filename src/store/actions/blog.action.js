@@ -1,7 +1,7 @@
 import { BLOG_FETCH_ERROR, BLOG_FETCH_PENDING, BLOG_FETCH_SUCCESS } from '../constants/blog.constant';
 
-export const fetchApiBlogAction = () => {
-    const vAPI_BLOG_URL = 'http://localhost:8000/api/v1/blog/'
+export const fetchApiBlogAction = (idRole) => {
+    const vAPI_BLOG_URL = `http://localhost:8000/api/v1/blog/find/?value=${idRole}`
 
     return async (dispatch) => {
         try {
@@ -18,7 +18,7 @@ export const fetchApiBlogAction = () => {
 
             return dispatch({
                 type: BLOG_FETCH_SUCCESS,
-                payload: data
+                payload: data.data
             })
 
         } catch (error) {

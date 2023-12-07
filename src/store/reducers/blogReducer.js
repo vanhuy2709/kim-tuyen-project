@@ -9,7 +9,7 @@ const initState = {
     listRole: undefined,
     rolePending: false,
 
-    // List Blog
+    // List Blog (MC, Beauty, Xe,...)
     listBlog: undefined,
     blogPending: false
 }
@@ -40,7 +40,7 @@ const blogReducer = (state = initState, action) => {
             break
         case BLOG_FETCH_SUCCESS:
             state.blogPending = false
-            state.listBlog = action.payload.data.result
+            state.listBlog = action.payload
             break
         case BLOG_FETCH_ERROR:
             break
