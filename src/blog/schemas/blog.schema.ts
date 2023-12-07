@@ -16,6 +16,12 @@ export class Blog {
     idRole: string;
 
     @Prop()
+    color: string;
+
+    @Prop()
+    video: string[];
+
+    @Prop()
     photo: string[];
 
     @Prop()
