@@ -5,7 +5,6 @@
         display               : flex;
         justify-content       : center;
         align-items           : center;
-        // background-image   : linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516128043650-037fbdbd0b6e?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-repeat     : no-repeat;
         background-position   : center;
         height                : 100vh;
@@ -37,6 +36,29 @@
 
         .post__video {
             padding-bottom: 5rem;
+            position: relative;
+            padding-bottom: 50%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .post__photo {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 3rem 0;
+            border: 0.5rem solid white;
+            border-radius: 1rem;
         }
     }
 

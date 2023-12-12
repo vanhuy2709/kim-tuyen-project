@@ -2,10 +2,10 @@
 
 .about__hero {
     padding            : 7rem 0;
-    background-image   : url('../../assets/images/kim-tuyen.png');
+    background-image   : url('../../assets/images/main-image.png');
     background-repeat  : no-repeat;
     background-position: top right;
-    background-size    : 40rem;
+    background-size    : 45rem;
 
     @include mobile {
         background-size: 32rem;

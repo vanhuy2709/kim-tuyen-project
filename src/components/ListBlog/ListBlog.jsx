@@ -4,7 +4,6 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { fetchApiBlogAction } from '../../store/actions/blog.action';
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
-import image from '../../assets/images/IMG_4101.JPG'
 
 const ListBlog = () => {
     const dispatch = useDispatch();
@@ -19,6 +18,8 @@ const ListBlog = () => {
 
     const { listBlog } = useSelector(reduxData => reduxData.blogReducer)
 
+    console.log(listBlog);
+
     const handleViewBlog = (idBlog) => {
         navigate(location.pathname + '/' + idBlog);
     }
@@ -32,14 +33,14 @@ const ListBlog = () => {
                     {listBlog && listBlog.length > 0 && listBlog.map((blog, index) => (
                         <div key={blog._id} className='blog-card' onClick={() => handleViewBlog(blog._id)}>
                             <div className='image'>
-                                <img src={image} className='blog-card__image' alt='img' />
+                                <img src={`https://drive.google.com/uc?export=view&id=${blog.thumb}`} className='blog-card__image' alt='img' />
                             </div>
                             <div className='content'>
                                 <div className='content__title'>
                                     <i className="fa-solid fa-minus"></i>
                                     <h4 href='/' className='blog-card__title'>{blog.title}</h4>
                                 </div>
-                                <p className='blog-card__brand'>Master of Ceremony</p>
+                                <p className='blog-card__brand'>KimBling</p>
                             </div>
                         </div>
                     ))}

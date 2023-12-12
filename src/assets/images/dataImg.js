@@ -1,12 +1,12 @@
-import congcapheLogo from "./cong-coffee-logo.png";
-import samsungLogo from "./samsung-logo.png";
-import gfiLogo from "./GFI-logo.png";
-import heinekenLogo from "./heineken-logo.png";
+import congcapheLogo from "./origin-logo/cong-cafe-logo.png";
+import samsungLogo from "./origin-logo/samsung-logo.png";
+import gfiLogo from "./origin-logo/gfi-logo.png";
+import heinekenLogo from "./origin-logo/heineken-logo.png";
 import californiaLogo from "./california-logo.png";
-import lazadaLogo from "./lazada-logo.png";
-import prudentialLogo from "./prudential-logo.png";
-import zemaLogo from "./zema-logo.png";
-import kitawaLogo from "./kitawa-logo.png";
+import lazadaLogo from "./origin-logo/lazada-logo.png";
+import prudentialLogo from "./origin-logo/prudential-logo.png";
+import zemaLogo from "./origin-logo/zema-logo.png";
+import vinfastLogo from './origin-logo/vinfast-logo.png';
 
 const data = [
   {
@@ -26,8 +26,8 @@ const data = [
   },
   {
     id: 4,
-    name: "lazada",
-    imgUrl: lazadaLogo,
+    name: "vinfast",
+    imgUrl: vinfastLogo,
   },
   {
     id: 5,
@@ -51,8 +51,8 @@ const data = [
   },
   {
     id: 9,
-    name: "kitawa",
-    imgUrl: kitawaLogo,
+    name: "lazada",
+    imgUrl: lazadaLogo,
   },
 ];
 
