@@ -68,8 +68,8 @@ export class ContactService {
   }
 
   async update(id: string, updateContactDto: UpdateContactDto) {
-    return await this.contactModel.updateOne({
-      _id: id, ...updateContactDto,
+    return await this.contactModel.findByIdAndUpdate(id, {
+      ...updateContactDto,
     });
   }
 

@@ -68,8 +68,8 @@ export class BlogService {
   }
 
   async update(id: string, updateBlogDto: UpdateBlogDto) {
-    return await this.blogModel.updateOne({
-      _id: id, ...updateBlogDto,
+    return await this.blogModel.findByIdAndUpdate(id, {
+      ...updateBlogDto,
     });
   }
 

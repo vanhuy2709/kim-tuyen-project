@@ -65,8 +65,8 @@ export class BrandService {
   }
 
   async update(id: string, updateBrandDto: UpdateBrandDto) {
-    return await this.brandModel.updateOne({
-      _id: id, ...updateBrandDto,
+    return await this.brandModel.findByIdAndUpdate(id, {
+      ...updateBrandDto,
     });
   }
 

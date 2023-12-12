@@ -12,4 +12,13 @@ export class CreateBlogDto {
     @IsNotEmpty({ message: "IdRole không được để trống" })
     idRole: mongoose.Schema.Types.ObjectId
 
+    color: string;
+
+    video: string[];
+
+    photo: string[];
+
+    createAt: Date;
+
+    thumb: string;
 }

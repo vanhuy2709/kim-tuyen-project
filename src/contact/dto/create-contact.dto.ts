@@ -14,4 +14,5 @@ export class CreateContactDto {
     @IsNotEmpty({ message: "Mô tả không được để trống" })
     description: string
 
+    status: string;
 }

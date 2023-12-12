@@ -78,9 +78,8 @@ export class RolesService {
         throw new BadRequestException(`Đã tồn tại ${updateRoleDto.nameRole}`)
       }
     }
-    return await this.roleModel.updateOne({
-      _id: id, ...updateRoleDto,
-
+    return await this.roleModel.findByIdAndUpdate(id, {
+      ...updateRoleDto,
     });
   }
   async remove(id: string) {
