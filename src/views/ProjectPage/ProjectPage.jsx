@@ -24,6 +24,7 @@ const ProjectPage = () => {
     <section className="project">
       <div className="wrapper">
         <div className="project-container">
+
           {listRole && listRole.length > 0 && listRole.map(role => (
             <div
               key={role._id}
@@ -45,13 +46,15 @@ const ProjectPage = () => {
               </div>
               <div className="project__item-thumb">
                 <img
-                  src={role.thumb}
+                  // src={role.thumb}
+                  src={`https://drive.google.com/uc?export=view&id=${role.thumb}`}
                   alt="project-thumb"
                   className="project__item-thumb--image"
                 />
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>

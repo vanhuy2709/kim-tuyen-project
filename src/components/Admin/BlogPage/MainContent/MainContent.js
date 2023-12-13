@@ -3,11 +3,16 @@ import "./MainContent.scss";
 
 // linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), (extra)
 
-function MainContent({ mainImage, title, param, listVideo, listPhoto }) {
+function MainContent({ mainImage, title, param, listVideo, listPhoto, color }) {
+
   const backgroundImage = {
     backgroundImage: `url(https://drive.google.com/uc?export=view&id=${mainImage})`,
     backgroundSize: "cover",
   };
+
+  const titleColor = {
+    color: color
+  }
 
   // console.log(props.listVideo);
 
@@ -18,7 +23,7 @@ function MainContent({ mainImage, title, param, listVideo, listPhoto }) {
       </div>
 
       <div className="post">
-        <h2 className="post__title">{title}</h2>
+        <h2 className="post__title" style={titleColor}>{title}</h2>
         <p className="post__param">{param}</p>
 
         {listVideo && listVideo.length > 0 && listVideo.map((video, index) => (
