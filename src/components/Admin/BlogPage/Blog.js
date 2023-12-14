@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { CircularProgress } from '@mui/material';
 
-const Blog = () => {
+const Blog = (props) => {
   const dispatch = useDispatch();
   const { idBlog } = useParams();
 
@@ -17,6 +17,13 @@ const Blog = () => {
   }, [dispatch, idBlog])
 
   const { blog, blogPending } = useSelector(reduxData => reduxData.blogReducer)
+
+  if (props) {
+    console.log(true);
+  }
+  else {
+    console.log(false);
+  }
 
   return (
     <section className="blog">

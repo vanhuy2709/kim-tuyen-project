@@ -39,7 +39,6 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/about/heineken" element={<Blog />} />
             <Route path="/project" element={<ProjectPage />} />
             <Route path="/project/:idRole" element={<ListBlog />} />
             <Route path="/project/:idRole/:idBlog" element={<Blog />} />

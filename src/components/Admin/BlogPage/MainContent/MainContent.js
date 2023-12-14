@@ -14,8 +14,6 @@ function MainContent({ mainImage, title, param, listVideo, listPhoto, color }) {
     color: color
   }
 
-  // console.log(props.listVideo);
-
   return (
     <div className="main-content">
       <div className="main-content__background" style={backgroundImage}>
@@ -31,6 +29,11 @@ function MainContent({ mainImage, title, param, listVideo, listPhoto, color }) {
             <iframe src={`https://www.youtube.com/embed/${video}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         ))}
+
+        {/* Test Video Player */}
+        {/* <div className="post__video">
+          <iframe src={`https://www.youtube.com/embed/dsgpGekZfds`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div> */}
 
         <div>
           {listPhoto && listPhoto.length > 0 && listPhoto.map((photo, index) => (
