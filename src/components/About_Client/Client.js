@@ -29,6 +29,7 @@ import zemaLogo from "../../assets/images/zema-logo.png";
 import senvitaLogo from '../../assets/images/senvita-logo.png';
 import xiaomiLogo from '../../assets/images/xiaomi-logo.png';
 import nuDoanhNhanLogo from '../../assets/images/nu-doanh-nhan-logo.png';
+import upgoLogo from '../../assets/images/upgo-logo.png'
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -74,6 +75,7 @@ const Client = () => {
             <img src={senvitaLogo} alt="gfi-logo" data-aos="fade-up" />
             <img src={tupperwareLogo} alt="gfi-logo" data-aos="fade-up" />
             <img src={emmieLogo} alt="gfi-logo" data-aos="fade-up" />
+            <img src={upgoLogo} alt="gfi-logo" data-aos="fade-up" />
           </div>
         </div>
       </div>

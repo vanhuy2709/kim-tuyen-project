@@ -1,4 +1,4 @@
-import logo from "../../assets/images/GFI-logo.png";
+import logo from "../../assets/images/logo-user/user-logo.jpg";
 import "./Header.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 

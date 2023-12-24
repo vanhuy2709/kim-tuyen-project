@@ -1,8 +1,8 @@
 import "./LeftSide.scss";
-import logo from "../../../../assets/images/GFI-logo.png";
+import logo from "../../../../assets/images/logo-user/user-logo.jpg";
 import { useNavigate } from "react-router-dom";
 
-function LeftSide(props) {
+function LeftSide() {
   const navigate = useNavigate();
   const handleNavigateHomePage = () => {
     navigate('/')
