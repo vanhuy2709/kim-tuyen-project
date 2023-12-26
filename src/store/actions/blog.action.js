@@ -1,7 +1,7 @@
 import { BLOG_FETCH_ERROR, BLOG_FETCH_PENDING, BLOG_FETCH_SUCCESS, BLOG_ID_FETCH_ERROR, BLOG_ID_FETCH_PENDING, BLOG_ID_FETCH_SUCCESS } from '../constants/blog.constant';
 
 export const fetchApiBlogAction = (idRole) => {
-    const vAPI_BLOG_URL = `http://localhost:8000/api/v1/blog/find/?value=${idRole}`
+    const vAPI_BLOG_URL = `http://kimtuyen.blog:8000/api/v1/blog/find/?value=${idRole}`
 
     return async (dispatch) => {
         try {
@@ -31,7 +31,7 @@ export const fetchApiBlogAction = (idRole) => {
 }
 
 export const fetchApiBlogByIdAction = (idBlog) => {
-    const vAPI_BLOG_URL = `http://localhost:8000/api/v1/blog/${idBlog}`
+    const vAPI_BLOG_URL = `http://kimtuyen.blog:8000/api/v1/blog/${idBlog}`
 
     return async (dispatch) => {
         try {
