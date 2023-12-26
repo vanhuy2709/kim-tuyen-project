@@ -2,7 +2,7 @@ import { FETCH_ROLE_ERROR, FETCH_ROLE_PENDING, FETCH_ROLE_SUCCESS } from '../con
 import axios from 'axios'
 
 export const fetchApiRoleAction = (inputToken) => {
-    const vAPI_ROLE_URL = 'http://kimtuyen.blog:8000/api/v1/roles/'
+    const vAPI_ROLE_URL = 'http://kimtuyen.blog/api/v1/roles/'
 
     return async (dispatch) => {
 
