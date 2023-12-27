@@ -18,7 +18,7 @@ export const fetchApiAuthAction = () => {
                 redirect: 'follow'
             };
 
-            let response = await fetch("http://kimtuyen.blog/api/v1/auth/login", requestOptions)
+            let response = await fetch("https://kimtuyen.blog/api/v1/auth/login", requestOptions)
             let data = await response.json();
 
             return dispatch({
