@@ -60,14 +60,14 @@ export class AuthService {
 
     getRefresh_token = (payload) => {
         return this.jwtService.sign(payload, {
-            secret: this.configService.get<string>('JWT_REFRESH_TOKEN_SECRET'),
-            expiresIn: this.configService.get<string>('JWT_REFRESH_TOKEN_EXPIRED')
+            secret: "SecretKey",
+            expiresIn: "1d"
         })
     }
     processNewToken = async (refresh_Token: string, response: Response) => {
         try {
             this.jwtService.verify(refresh_Token, {
-                secret: this.configService.get<string>('JWT_REFRESH_TOKEN_SECRET')
+                secret: "SecretKey"
             })
             const user = await this.usersService.findUserbyToken(refresh_Token)
             const { _id, username } = user;

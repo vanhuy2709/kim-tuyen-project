@@ -13,9 +13,9 @@ import { RolesModule } from 'src/roles/roles.module';
         JwtModule.registerAsync({
             imports: [ConfigModule],
             useFactory: async (configService: ConfigService) => ({
-                secret: configService.get<string>('JWT_SECRET'),
+                secret: "SecretKey",
                 signOptions: {
-                    expiresIn: configService.get<string>('JWT_EXPIRED'),
+                    expiresIn: "1d",
                 },
             }),
             inject: [ConfigService],

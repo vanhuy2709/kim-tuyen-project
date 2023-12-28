@@ -14,7 +14,7 @@ import { BrandModule } from './brand/brand.module';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
-        uri: configService.get<string>('MONGODB_URI'),
+        uri: "mongodb+srv://longhoang5602:wJuWYG5rnhU2d2Ub@blognestjs.q7znf0b.mongodb.net/",
       }),
       inject: [ConfigService],
     }),
@@ -32,4 +32,4 @@ import { BrandModule } from './brand/brand.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
