@@ -6,10 +6,10 @@ export type BlogDocument = HydratedDocument<Blog>;
 @Schema({ timestamps: true })
 export class Blog {
 
-    @Prop({ required: true })
+    @Prop()
     title: string;
 
-    @Prop({ required: true })
+    @Prop()
     description: string;
 
     @Prop({ required: true })
