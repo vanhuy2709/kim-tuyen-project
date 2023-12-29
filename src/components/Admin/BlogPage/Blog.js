@@ -18,12 +18,6 @@ const Blog = (props) => {
 
   const { blog, blogPending } = useSelector(reduxData => reduxData.blogReducer)
 
-  if (props) {
-    console.log(true);
-  }
-  else {
-    console.log(false);
-  }
 
   return (
     <section className="blog">

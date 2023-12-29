@@ -22,7 +22,7 @@ const Resume = () => {
             có giá trị sẽ tạo nên giá trị" - <span>KIM BLING</span>
           </p>
           <p>
-            Bản thân <span>KIM BLING</span> luôn theo đuổi hành trình tạo ra giá
+            <span>KIM BLING</span> luôn theo đuổi hành trình tạo ra giá
             trị cho cộng đồng, mong muốn lan toả, truyền tải những điều ý nghĩa
             tích cực.
           </p>
@@ -31,7 +31,7 @@ const Resume = () => {
             tiên quyết khi giải quyết vấn đề.
           </p>
           <p>
-            Là người có tâm hồn nghệ sĩ, yêu những giai điệu và không ngại thử
+            Tâm hồn nghệ sĩ, yêu những giai điệu và không ngại thử
             thách.
           </p>
         </div>
@@ -54,7 +54,7 @@ const Resume = () => {
             <li className="experience--content">
               HOSTING How2Money, ZReview, ZWeather...
               <br />
-              ZING NEWS, 6/2021-
+              ZNEWS, 6/2021
             </li>
             <li className="experience--content">
               MC News 24h, Blockchain Event
@@ -67,14 +67,8 @@ const Resume = () => {
               GLOWIE APP, 2021-2022
             </li>
             <li className="experience--content">
-              KOL at Blue Agency VietNam
+              FREELANCE MC, MODEL, KOL,...
               <br />
-              2023
-            </li>
-            <li className="experience--content">
-              FREELANCE MC, MODEL
-              <br />
-              NESTLE, PNJ, GUMAC, HEINEKEN...
             </li>
           </ul>
         </div>
