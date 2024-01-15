@@ -6,7 +6,8 @@ import "./MainContent.scss";
 function MainContent({ mainImage, title, param, listVideo, listPhoto, color }) {
 
   const backgroundImage = {
-    backgroundImage: `url(https://drive.google.com/uc?export=view&id=${mainImage})`,
+    // backgroundImage: `url(https://drive.google.com/uc?export=view&id=${mainImage})`,
+    backgroundImage: `url(https://drive.google.com/thumbnail?id=${mainImage}&sz=w1000`,
     backgroundSize: "cover",
   };
 
@@ -37,7 +38,13 @@ function MainContent({ mainImage, title, param, listVideo, listPhoto, color }) {
 
         <div>
           {listPhoto && listPhoto.length > 0 && listPhoto.map((photo, index) => (
-            <img key={index} src={`https://drive.google.com/uc?export=view&id=${photo}`} alt="abc" className="post__photo" />
+            <img
+              key={index}
+              // src={`https://drive.google.com/uc?export=view&id=${photo}`}
+              src={`https://drive.google.com/thumbnail?id=${photo}&sz=w1000`}
+              alt="abc"
+              className="post__photo"
+            />
           ))}
         </div>
       </div>

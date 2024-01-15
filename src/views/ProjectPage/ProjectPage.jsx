@@ -25,7 +25,7 @@ const ProjectPage = () => {
       <div className="wrapper">
         <div className="project-container">
 
-          {listRole && listRole.length > 0 && listRole.map(role => (
+          {listRole && listRole?.length > 0 && listRole?.map(role => (
             <div
               key={role._id}
               className="project__item"
@@ -46,7 +46,8 @@ const ProjectPage = () => {
               </div>
               <div className="project__item-thumb">
                 <img
-                  src={`https://drive.google.com/uc?export=view&id=${role.thumb}`}
+                  src={`https://drive.google.com/thumbnail?id=${role.thumb}&sz=w1000`}
+                  // src={`https://drive.google.com/uc?export=view&id=${role.thumb}`}
                   alt="project-thumb"
                   className="project__item-thumb--image"
                 />

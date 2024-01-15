@@ -34,7 +34,12 @@ const ListBlog = () => {
             (listBlog && listBlog.length > 0 && listBlog.map((blog, index) => (
               <div key={blog._id} className='blog-card' onClick={() => handleViewBlog(blog._id)}>
                 <div className='image'>
-                  <img src={`https://drive.google.com/uc?export=view&id=${blog.thumb}`} className='blog-card__image' alt='img' />
+                  <img
+                    // src={`https://drive.google.com/uc?export=view&id=${blog.thumb}`}
+                    src={`https://drive.google.com/thumbnail?id=${blog.thumb}&sz=w1000`}
+                    className='blog-card__image'
+                    alt='img'
+                  />
                 </div>
                 <div className='content'>
                   <div className='content__title'>
