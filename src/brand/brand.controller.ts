@@ -1,18 +1,27 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query, UploadedFiles } from '@nestjs/common';
 import { BrandService } from './brand.service';
 import { CreateBrandDto } from './dto/create-brand.dto';
 import { UpdateBrandDto } from './dto/update-brand.dto';
 import { Public, ResponseMessage } from 'src/decorator/customize';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
+import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { multerOptions } from 'src/core/multer.config';
 
 @Controller('brand')
 export class BrandController {
   constructor(private readonly brandService: BrandService) { }
 
   @Post()
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'urlImage', maxCount: 1 },
+    ], multerOptions),
+
+  )
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Brand")
-  create(@Body() createBrandDto: CreateBrandDto) {
+  create(@Body() createBrandDto: CreateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
+    createBrandDto.urlImage = uploadImage.urlImage[0].filename;
     return this.brandService.create(createBrandDto);
   }
 
@@ -45,7 +54,16 @@ export class BrandController {
   @Patch(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Update a Brand")
-  update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto) {
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'urlImage', maxCount: 1 },
+    ], multerOptions),
+
+  )
+  update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
+    if (updateBrandDto.urlImage) {
+      updateBrandDto.urlImage = uploadImage.urlImage[0].filename;
+    }
     return this.brandService.update(id, updateBrandDto);
   }
 

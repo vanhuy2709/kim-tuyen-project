@@ -30,6 +30,9 @@ export class Blog {
     @Prop()
     thumb: string;
 
+    @Prop()
+    isFeatured: boolean
+
 }
 
 export const BlogSchema = SchemaFactory.createForClass(Blog);

@@ -1,18 +1,34 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query, UploadedFiles, ParseFilePipe, UploadedFile, MaxFileSizeValidator, FileTypeValidator, ParseFilePipeBuilder, HttpStatus } from '@nestjs/common';
 import { BlogService } from './blog.service';
 import { CreateBlogDto } from './dto/create-blog.dto';
 import { UpdateBlogDto } from './dto/update-blog.dto';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
 import { Public, ResponseMessage } from 'src/decorator/customize';
+import { AnyFilesInterceptor, FileFieldsInterceptor, FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
+import { multerOptions } from 'src/core/multer.config';
 
 @Controller('blog')
 export class BlogController {
   constructor(private readonly blogService: BlogService) { }
 
   @Post()
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'photos', maxCount: 20 },
+      { name: 'thumb', maxCount: 1 },
+    ], multerOptions),
+
+  )
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Blog")
-  create(@Body() createBlogDto: CreateBlogDto) {
+  create(@Body() createBlogDto: CreateBlogDto, @UploadedFiles() uploadImage: { photos: Express.Multer.File[], thumb: Express.Multer.File[] }) {
+    let uploadPhotos: string[] = [];
+    let uploadThumb: string = uploadImage.thumb[0].filename;
+    for (let index = 0; index < uploadImage.photos.length; index++) {
+      uploadPhotos.push(uploadImage.photos[index].filename)
+    }
+    createBlogDto.photo = uploadPhotos
+    createBlogDto.thumb = uploadThumb
     return this.blogService.create(createBlogDto);
   }
 
@@ -45,7 +61,26 @@ export class BlogController {
   @Patch(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Update a Blog")
-  update(@Param('id') id: string, @Body() updateBlogDto: UpdateBlogDto) {
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'photos', maxCount: 20 },
+      { name: 'thumb', maxCount: 1 },
+    ], multerOptions),
+
+  )
+  update(@Param('id') id: string, @Body() updateBlogDto: UpdateBlogDto, @UploadedFiles() uploadImage: { photos: Express.Multer.File[], thumb: Express.Multer.File[] }) {
+    if (uploadImage.photos) {
+      let uploadPhotos: string[] = [];
+      for (let index = 0; index < uploadImage.photos.length; index++) {
+        uploadPhotos.push(uploadImage.photos[index].filename)
+      }
+      updateBlogDto.photo = uploadPhotos
+    }
+    if (uploadImage.thumb) {
+      let uploadThumb: string = uploadImage.thumb[0].filename;
+      updateBlogDto.thumb = uploadThumb
+    }
+
     return this.blogService.update(id, updateBlogDto);
   }
 
@@ -55,4 +90,5 @@ export class BlogController {
   remove(@Param('id') id: string) {
     return this.blogService.remove(id);
   }
+
 }

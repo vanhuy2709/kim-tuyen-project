@@ -33,11 +33,12 @@ export class UsersService {
     return user;
   }
 
-  async changePassword(username: string, newPassword: string) {
-    const hashPassword = await this.getHashPassword(newPassword);
+  async changePassword(user: any) {
+    console.log(user)
 
-    return await this.userModel.findOneAndUpdate({
-      username: username,
+    const hashPassword = await this.getHashPassword(user.password);
+    console.log(hashPassword)
+    return await this.userModel.findOneAndUpdate({ username: user.username }, {
       password: hashPassword
     });
 

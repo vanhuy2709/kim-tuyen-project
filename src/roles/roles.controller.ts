@@ -1,9 +1,11 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, Query, UploadedFiles } from '@nestjs/common';
 import { RolesService } from './roles.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
 import { Public, ResponseMessage } from 'src/decorator/customize';
 import { CreateInterceptor, TransformInterceptor } from 'src/core/transform.interceptor';
+import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { multerOptions } from 'src/core/multer.config';
 
 @Controller('roles')
 export class RolesController {
@@ -12,7 +14,14 @@ export class RolesController {
   @Post()
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Role")
-  create(@Body() createRoleDto: CreateRoleDto) {
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'thumb', maxCount: 1 },
+    ], multerOptions),
+
+  )
+  create(@Body() createRoleDto: CreateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
+    createRoleDto.thumb = uploadImage.thumb[0].filename;
     return this.rolesService.create(createRoleDto);
   }
 
@@ -37,7 +46,16 @@ export class RolesController {
   @Patch(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Update a Role")
-  update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto) {
+  @UseInterceptors(
+    FileFieldsInterceptor([
+      { name: 'thumb', maxCount: 1 },
+    ], multerOptions),
+
+  )
+  update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
+    if (uploadImage.thumb) {
+      updateRoleDto.thumb = uploadImage.thumb[0].path
+    }
     return this.rolesService.update(id, updateRoleDto);
   }
 

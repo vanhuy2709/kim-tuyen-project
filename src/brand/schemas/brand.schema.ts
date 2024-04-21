@@ -10,7 +10,7 @@ export class Brand {
     title: string;
 
     @Prop()
-    urlImage: string[];
+    urlImage: string;
 
 }
 

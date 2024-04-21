@@ -28,8 +28,8 @@ export class UsersController {
   @Patch()
   @ResponseMessage("Update a user")
   @UseInterceptors(TransformInterceptor)
-  update(@Body() username: string, @Body() password: string) {
-    return this.usersService.changePassword(username, password);
+  update(@Body() user: any) {
+    return this.usersService.changePassword(user);
   }
 
 

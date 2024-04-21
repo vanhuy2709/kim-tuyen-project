@@ -19,4 +19,6 @@ export class CreateBlogDto {
     createAt: Date;
 
     thumb: string;
+
+    isFeatured: boolean
 }
