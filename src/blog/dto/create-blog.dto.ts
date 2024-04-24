@@ -14,12 +14,10 @@ export class CreateBlogDto {
 
     video: string[];
 
-    @IsNotEmpty({ message: "Photo không được để trống" })
     photo: string[];
 
     createAt: Date;
 
-    @IsNotEmpty({ message: "Thumb không được để trống" })
     thumb: string;
 
     isFeatured: boolean
