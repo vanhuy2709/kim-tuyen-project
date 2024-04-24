@@ -20,7 +20,9 @@ export class RolesController {
     ], multerOptions),
   )
   create(@Body() createRoleDto: CreateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
-    createRoleDto.thumb = uploadImage.thumb[0].filename;
+    if (uploadImage.thumb[0] !== undefined) {
+      createRoleDto.thumb = uploadImage.thumb[0].filename;
+    }
     return this.rolesService.create(createRoleDto);
   }
 
@@ -52,8 +54,8 @@ export class RolesController {
 
   )
   update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
-    if (uploadImage.thumb) {
-      updateRoleDto.thumb = uploadImage.thumb[0].filename
+    if (uploadImage.thumb[0] !== undefined) {
+      updateRoleDto.thumb = uploadImage.thumb[0].filename;
     }
     return this.rolesService.update(id, updateRoleDto);
   }

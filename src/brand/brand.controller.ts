@@ -20,7 +20,7 @@ export class BrandController {
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Brand")
   create(@Body() createBrandDto: CreateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
-    if (uploadImage.urlImage[0]) {
+    if (uploadImage.urlImage[0] !== undefined) {
       createBrandDto.urlImage = uploadImage.urlImage[0].filename;
     }
     return this.brandService.create(createBrandDto);
@@ -61,7 +61,7 @@ export class BrandController {
     ], multerOptions),
   )
   update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
-    if (uploadImage.urlImage[0]) {
+    if (uploadImage.urlImage[0] !== undefined) {
       updateBrandDto.urlImage = uploadImage.urlImage[0].filename;
     }
     return this.brandService.update(id, updateBrandDto);

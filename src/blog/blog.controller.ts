@@ -68,14 +68,14 @@ export class BlogController {
     ], multerOptions),
   )
   update(@Param('id') id: string, @Body() updateBlogDto: UpdateBlogDto, @UploadedFiles() uploadImage: { photos: Express.Multer.File[], thumb: Express.Multer.File[] }) {
-    if (uploadImage.photos) {
+    if (uploadImage.photos !== undefined) {
       let uploadPhotos: string[] = [];
       for (let index = 0; index < uploadImage.photos.length; index++) {
         uploadPhotos.push(uploadImage.photos[index].filename)
       }
       updateBlogDto.photo = uploadPhotos
     }
-    if (uploadImage.thumb) {
+    if (uploadImage.thumb !== undefined) {
       let uploadThumb: string = uploadImage.thumb[0].filename;
       updateBlogDto.thumb = uploadThumb
     }
