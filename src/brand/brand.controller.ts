@@ -61,7 +61,7 @@ export class BrandController {
     ], multerOptions),
   )
   update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
-    if (uploadImage.urlImage[0] !== undefined) {
+    if (uploadImage.urlImage !== undefined) {
       updateBrandDto.urlImage = uploadImage.urlImage[0].filename;
     }
     return this.brandService.update(id, updateBrandDto);
