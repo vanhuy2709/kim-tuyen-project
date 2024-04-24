@@ -53,7 +53,7 @@ export class BrandService {
     }
   }
   async findOne(id: string) {
-    return await this.brandModel.findOne({ _id: id })
+    return await this.brandModel.findById(id)
   }
   async findValue(value: string) {
     return await this.brandModel.find({
