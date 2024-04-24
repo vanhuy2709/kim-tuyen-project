@@ -18,7 +18,6 @@ export class RolesController {
     FileFieldsInterceptor([
       { name: 'thumb', maxCount: 1 },
     ], multerOptions),
-
   )
   create(@Body() createRoleDto: CreateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
     createRoleDto.thumb = uploadImage.thumb[0].filename;
@@ -54,7 +53,7 @@ export class RolesController {
   )
   update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto, @UploadedFiles() uploadImage: { thumb: Express.Multer.File[] }) {
     if (uploadImage.thumb) {
-      updateRoleDto.thumb = uploadImage.thumb[0].path
+      updateRoleDto.thumb = uploadImage.thumb[0].filename
     }
     return this.rolesService.update(id, updateRoleDto);
   }

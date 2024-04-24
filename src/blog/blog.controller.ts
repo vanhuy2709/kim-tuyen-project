@@ -66,7 +66,6 @@ export class BlogController {
       { name: 'photos', maxCount: 20 },
       { name: 'thumb', maxCount: 1 },
     ], multerOptions),
-
   )
   update(@Param('id') id: string, @Body() updateBlogDto: UpdateBlogDto, @UploadedFiles() uploadImage: { photos: Express.Multer.File[], thumb: Express.Multer.File[] }) {
     if (uploadImage.photos) {

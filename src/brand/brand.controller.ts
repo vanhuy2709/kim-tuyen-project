@@ -16,7 +16,6 @@ export class BrandController {
     FileFieldsInterceptor([
       { name: 'urlImage', maxCount: 1 },
     ], multerOptions),
-
   )
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Brand")
@@ -58,7 +57,6 @@ export class BrandController {
     FileFieldsInterceptor([
       { name: 'urlImage', maxCount: 1 },
     ], multerOptions),
-
   )
   update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto, @UploadedFiles() uploadImage: { urlImage: Express.Multer.File[] }) {
     if (updateBrandDto.urlImage) {
