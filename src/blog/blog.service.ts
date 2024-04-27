@@ -63,6 +63,10 @@ export class BlogService {
     })
   }
 
+  async findAllFeatured() {
+    return (await this.blogModel.find({ isFeatured: true })).reverse()
+  }
+
   async findOne(id: string) {
     return await this.blogModel.findOne({ _id: id })
   }

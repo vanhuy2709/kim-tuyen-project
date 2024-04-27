@@ -14,7 +14,7 @@ export class BlogController {
   @Post()
   @UseInterceptors(
     FileFieldsInterceptor([
-      { name: 'photos', maxCount: 20 },
+      { name: 'photo', maxCount: 20 },
       { name: 'thumb', maxCount: 1 },
     ], multerOptions),
 
@@ -48,6 +48,14 @@ export class BlogController {
   @Public()
   findValue(@Query('value') value: string) {
     return this.blogService.findValue(value);
+  }
+
+  @Get("find-all")
+  @UseInterceptors(TransformInterceptor)
+  @ResponseMessage("Get full featured")
+  @Public()
+  findAllFeatured() {
+    return this.blogService.findAllFeatured();
   }
 
   @Get(':id')
