@@ -34,10 +34,8 @@ export class UsersService {
   }
 
   async changePassword(user: any) {
-    console.log(user)
 
     const hashPassword = await this.getHashPassword(user.password);
-    console.log(hashPassword)
     return await this.userModel.findOneAndUpdate({ username: user.username }, {
       password: hashPassword
     });
