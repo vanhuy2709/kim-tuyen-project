@@ -68,7 +68,7 @@ export class BlogService {
   }
 
   async findOne(id: string) {
-    return await this.blogModel.findOne({ _id: id })
+    return await this.blogModel.findById(id)
   }
 
   async update(id: string, updateBlogDto: UpdateBlogDto) {

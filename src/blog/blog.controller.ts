@@ -21,17 +21,19 @@ export class BlogController {
   )
   @UseInterceptors(CreateInterceptor)
   @ResponseMessage("Create Blog")
-  create(@Body() createBlogDto: CreateBlogDto, @UploadedFiles() uploadImage: { photos: Express.Multer.File[], thumb: Express.Multer.File[] }) {
-
-    if (uploadImage.photos !== undefined && uploadImage.thumb !== undefined) {
+  create(@Body() createBlogDto: CreateBlogDto, @UploadedFiles() uploadImage: { photo: Express.Multer.File[], thumb: Express.Multer.File[] }) {
+    console.log(uploadImage.photo)
+    console.log(uploadImage.thumb)
+    if (uploadImage.photo !== undefined && uploadImage.thumb !== undefined) {
       let uploadPhotos: string[] = [];
       let uploadThumb: string = uploadImage.thumb[0].filename;
-      for (let index = 0; index < uploadImage.photos.length; index++) {
-        uploadPhotos.push(uploadImage.photos[index].filename)
+      for (let index = 0; index < uploadImage.photo.length; index++) {
+        uploadPhotos.push(uploadImage.photo[index].filename)
       }
       createBlogDto.photo = uploadPhotos
       createBlogDto.thumb = uploadThumb
     }
+    console.log(createBlogDto)
     return this.blogService.create(createBlogDto);
   }
 
