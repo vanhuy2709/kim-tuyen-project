@@ -8,6 +8,10 @@ export type DescriptionsDocument = HydratedDocument<Descriptions>;
 export class Descriptions {
     @Prop()
     description: string;
+    @Prop()
+    experience: string;
+    @Prop()
+    education: string;
 }
 
 export const DescriptionsSchema = SchemaFactory.createForClass(Descriptions);

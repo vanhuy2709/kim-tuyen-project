@@ -52,20 +52,6 @@ export class DescriptionsService {
       result //kết quả query
     }
   }
-  async findValue(value: string) {
-
-    return await this.descriptionsModel.find({
-      $or: [
-        { title: { $regex: value, $options: 'i' } },
-        { description: { $regex: value, $options: 'i' } },
-        { idRole: { $regex: value, $options: 'i' } },
-      ]
-    })
-  }
-
-  async findAllFeatured() {
-    return (await this.descriptionsModel.find({ isFeatured: true })).reverse()
-  }
 
   async findOne(id: string) {
     return await this.descriptionsModel.findById(id)

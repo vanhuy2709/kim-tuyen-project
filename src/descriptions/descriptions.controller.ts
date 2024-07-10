@@ -27,22 +27,6 @@ export class DescriptionsController {
     return this.descriptionsService.findAll(+currentPage, +limit, qs);
   }
 
-  @Get("find")
-  @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Get a Descriptions")
-  @Public()
-  findValue(@Query('value') value: string) {
-    return this.descriptionsService.findValue(value);
-  }
-
-  @Get("find-all")
-  @UseInterceptors(TransformInterceptor)
-  @ResponseMessage("Get full featured")
-  @Public()
-  findAllFeatured() {
-    return this.descriptionsService.findAllFeatured();
-  }
-
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Descriptions")
