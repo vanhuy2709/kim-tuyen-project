@@ -9,6 +9,7 @@ import { BlogModule } from './blog/blog.module';
 import { ContactModule } from './contact/contact.module';
 import { BrandModule } from './brand/brand.module';
 import { DescriptionsModule } from './descriptions/descriptions.module';
+import { SocialModule } from './social/social.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { DescriptionsModule } from './descriptions/descriptions.module';
     ContactModule,
     BrandModule,
     DescriptionsModule,
+    SocialModule,
 
   ],
   controllers: [AppController],
